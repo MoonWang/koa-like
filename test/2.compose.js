@@ -3,25 +3,28 @@ const Koa = require('../lib/koa');
 const app = new Koa();
 const port = 8080;
 
-app.use((ctx, next) => {
+app.use(async (ctx, next) => {
     debugger
     ctx.body = 'hello koa1';
     debugger
-    next();
+    await next();
 });
 
-app.use((ctx, next) => {
+app.use(async (ctx, next) => {
     debugger
     ctx.body = 'hello koa2';
     debugger
-    next();
+    await new Promise((resolve, reject) => {
+        setTimeout(resolve, 1000);
+    });
+    await next();
 });
 
-app.use((ctx, next) => {
+app.use(async (ctx, next) => {
     debugger
     ctx.body = 'hello koa3';
     debugger
-    next();
+    await next();
 });
 
 app.listen(port, () => {
