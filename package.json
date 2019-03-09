@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/MoonWang/koa-like#readme",
   "dependencies": {
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "mime": "^2.4.0"
   }
 }

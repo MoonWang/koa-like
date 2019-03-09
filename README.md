@@ -35,8 +35,16 @@ function compose (middlewares) {
 }
 ```
 
+<img src="./images/onionModel.png">
+
 由于中间件总数不具有确定性，所以不能直接使用上述方式进行调用，而应该提取一个方法 `dispatch` 用于`递归`调用所有中间件。
 
 测试：
 - 文件：2.compose.js
 - 请求：curl -v http://localhost:8080
+
+# 三、常用中间件
+
+## 3.1 static-server
+
+这个没什么好讲的，主要注意处理异步问题，细节可以参考 [express-like/server-static.js](https://github.com/MoonWang/express-like/blob/master/test/middleware/serve-static.js)
