@@ -1,0 +1,23 @@
+{
+  "name": "koa-like",
+  "version": "1.0.0",
+  "description": "简单版的 koa 框架实现",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonWang/koa-like.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoonWang/koa-like/issues"
+  },
+  "homepage": "https://github.com/MoonWang/koa-like#readme",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
