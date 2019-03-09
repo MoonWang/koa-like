@@ -48,3 +48,7 @@ function compose (middlewares) {
 ## 3.1 static-server
 
 这个没什么好讲的，主要注意处理异步问题，细节可以参考 [express-like/server-static.js](https://github.com/MoonWang/express-like/blob/master/test/middleware/serve-static.js)
+
+## 3.2 router
+
+路由也有个 layer 层的概念，只是执行匹配路由的时候，并不是遍历执行，而是使用 compose 组合匹配路由后执行，执行方式同 middleware
